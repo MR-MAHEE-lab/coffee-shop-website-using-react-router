@@ -19,3 +19,4 @@ This project is a coffee shop app built with React and Vite. It features a landi
 - AOS (Animate on scroll)
 - Slick-carousel
 # coffee-shop-website-reworked
+# coffee-shop-website-reworked
