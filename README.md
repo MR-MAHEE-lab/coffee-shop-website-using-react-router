@@ -27,4 +27,4 @@ A modern Coffee Shop web app built with React and Vite.
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/coffee-shop-app.git
+   git clone https://github.com/MR-MAHEE-lab/coffee-shop-website-using-react-router.git
