@@ -6,7 +6,6 @@ This project is a coffee shop app built with React and Vite. It features a landi
 
 - Landing page with information about the coffee shop
 - Menu page displaying the available drinks and food items
-- Download from Android and ios
 - Testimonial section 
 
 ## Technologies Used
