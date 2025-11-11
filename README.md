@@ -1,22 +1,37 @@
 # Coffee Shop App
 
-This project is a coffee shop app built with React and Vite. It features a landing page with information about the coffee shop and its offerings.
+A modern Coffee Shop web app built with React and Vite.
 
 ## Features
 
-- Landing page with information about the coffee shop
-- Menu page displaying the available drinks and food items
-- Download from Android and ios
-- Testimonial section 
+- Landing page with hero section and shop info
+- Menu page displaying drinks and food items
+- Product details popup on image click
+- Add to cart functionality with notification
+- Order page with Clear button
+- Download section for Android & iOS
+- Testimonials carousel
+- Animated scroll effects (AOS)
+- Fully responsive design
 
 ## Technologies Used
 
 - React
 - Vite
-- HTML
-- CSS (with Tailwind CSS for styling)
+- Tailwind CSS
 - JavaScript
+<<<<<<< HEAD
 - AOS (Animate on scroll)
 - Slick-carousel
 # coffee-shop-website-reworked
 # coffee-shop-website-reworked
+=======
+- AOS (Animate on Scroll)
+- Slick-carousel (react-slick)
+
+## Setup
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/MR-MAHEE-lab/coffee-shop-website-using-react-router.git
+>>>>>>> refs/remotes/origin/main
