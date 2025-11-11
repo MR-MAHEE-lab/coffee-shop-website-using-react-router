@@ -20,67 +20,54 @@ const ServicesData = [
 ];
 
 const Services = ({ addToOrder }) => {
-  const [selectedProduct, setSelectedProduct] = useState(null); // modal state
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
-  const calculateSalePrice = (price) => {
-    return (price * 0.85).toFixed(2); // 15% off
-  };
+  const calculateSalePrice = (price) => (price * 0.85).toFixed(2);
 
   return (
-    <div className="py-10">
+    <div className="py-10" id="services">
       <div className="container mx-auto">
-        <div className="text-center mb-20">
-          <h1 className="text-4xl font-bold font-cursive text-gray-800">Best Coffee For You</h1>
-        </div>
+        <h1 className="text-4xl font-bold font-cursive text-gray-800 text-center mb-10">Best Coffee For You</h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 place-items-center">
-          {ServicesData.map((product) => (
-            <div key={product.id} className="relative rounded-2xl bg-white shadow-xl w-[320px] text-center p-5 transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
-              
-              {/* Sale badge */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 place-items-center">
+          {ServicesData.map(product => (
+            <div key={product.id} className="relative rounded-2xl bg-white shadow-xl w-full max-w-[300px] text-center p-5 hover:scale-105 transition-transform duration-300">
               <div className="absolute top-3 left-3 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">
                 15% OFF
               </div>
 
-              {/* Image clickable for modal */}
               <img
                 src={product.img}
                 alt={product.name}
-                className="max-w-[220px] mx-auto mb-4 h-[180px] object-contain cursor-pointer"
+                className="max-w-[180px] mx-auto mb-4 h-[160px] object-contain cursor-pointer"
                 onClick={() => setSelectedProduct(product)}
               />
 
               <h1 className="text-xl font-bold mb-2">{product.name}</h1>
-              
-              {/* Price with discount */}
+
               <div className="mb-2">
                 <span className="text-gray-400 line-through mr-2">${product.price.toFixed(2)}</span>
                 <span className="text-lg font-semibold text-green-600">${calculateSalePrice(product.price)}</span>
               </div>
-              
-              <div className="mt-4">
-                <button
-                  onClick={() => addToOrder({ ...product, price: calculateSalePrice(product.price) })}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors"
-                >
-                  Add to Cart
-                </button>
-              </div>
+
+              <button
+                onClick={() => addToOrder({ ...product, price: calculateSalePrice(product.price) })}
+                className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors"
+              >
+                Add to Cart
+              </button>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Modal for product details */}
       {selectedProduct && (
-        <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
-          <div className="bg-white rounded-2xl w-11/12 max-w-md p-6 relative">
+        <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50 px-4">
+          <div className="bg-white rounded-2xl w-full max-w-md p-6 relative">
             <button
               className="absolute top-3 right-3 text-xl font-bold"
               onClick={() => setSelectedProduct(null)}
-            >
-              &times;
-            </button>
+            >&times;</button>
             <img
               src={selectedProduct.img}
               alt={selectedProduct.name}

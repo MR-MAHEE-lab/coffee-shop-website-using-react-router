@@ -28,6 +28,10 @@ const App = () => {
     setOrderList(prev => [...prev, product]);
   };
 
+  const clearOrder = () => {
+    setOrderList([]);
+  };
+
   return (
     <Router>
       <div className='overflow-x-hidden'>
@@ -47,7 +51,7 @@ const App = () => {
           />
           <Route
             path="/order"
-            element={<OrderPage orderList={orderList} />}
+            element={<OrderPage orderList={orderList} clearOrder={clearOrder} />}
           />
         </Routes>
         <Footer />
