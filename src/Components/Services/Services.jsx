@@ -52,7 +52,7 @@ const Services = ({ addToOrder }) => {
 
               <button
                 onClick={() => addToOrder({ ...product, price: calculateSalePrice(product.price) })}
-                className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors"
+                className="bg-amber-950 text-white px-4 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors"
               >
                 Add to Cart
               </button>
